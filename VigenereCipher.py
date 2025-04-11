@@ -38,7 +38,8 @@ class VigenereCipher:
 
         return ''.join(decrypted_message)
 
-key = "key"
-message = "Hello, world!"
-print(VigenereCipher(key).encrypt(message), VigenereCipher(key).decrypt(VigenereCipher(key).encrypt(message)), sep='\n')
-print(VigenereCipher(key).decrypt(message))
+if __name__ == '__main__':
+    key = "key"
+    message = "Hello, world!"
+    print(VigenereCipher(key).encrypt(message), VigenereCipher(key).decrypt(VigenereCipher(key).encrypt(message)), sep='\n')
+    print(VigenereCipher(key).decrypt(message))
